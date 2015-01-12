@@ -122,7 +122,6 @@
 			
 			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/richtext_redactor/lib/redactor.css', 'screen', 200);
 			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/richtext_redactor/assets/redactor.css', 'screen', 210);
-			Administration::instance()->Page->addScriptToHead(URL . '/extensions/richtext_redactor/lib/jquery.redactor.js', 200);
 			Administration::instance()->Page->addScriptToHead(URL . '/extensions/richtext_redactor/lib/redactor.min.js', 201);
 			Administration::instance()->Page->addScriptToHead(URL . '/symphony/extension/richtext_redactor/redactor/', 202);
 
@@ -130,6 +129,7 @@
 			if(isset($code) && $code != 'en') {
 				Administration::instance()->Page->addScriptToHead(URL . '/extensions/richtext_redactor/lib/lang/' . $code . '.js', 203);
 			}
+
 		}
 		
 		public function appendPreferences($context) {
