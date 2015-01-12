@@ -49,7 +49,7 @@
 	}
 ?>
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 
 	var options = {
 
@@ -139,7 +139,10 @@ jQuery(document).ready(function() {
 		imageGetJson: Symphony.Context.get('root') + '/symphony/extension/richtext_redactor/images/'
 	}
 
-	jQuery('textarea.redactor').redactor(options);
+	$('textarea.redactor').each(function(){
+
+		$(this).redactor(options);
+	});
 
 });
 
